@@ -1,5 +1,8 @@
 package dev.joseluis;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 import org.junit.jupiter.api.Test;
 
 public class IndexMBITest {
@@ -10,7 +13,7 @@ public class IndexMBITest {
       
       int weight = indexMBI.getWeight();
       double height = indexMBI.getHeight();
-    
+
       assertThat(weight, is(87));
       assertThat(height, is(1.74));
     }
@@ -19,5 +22,11 @@ public class IndexMBITest {
         int weight = 87;
         double height = 1.74;
         IndexMBI indexMBI = new IndexMBI(weight,height);
-    }
-}
+
+        double result = indexMBI.calculateMBI();
+        assertThat(result, is(28.73));
+        
+
+      }
+
+}      
