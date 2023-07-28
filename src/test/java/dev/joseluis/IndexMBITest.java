@@ -3,6 +3,7 @@ package dev.joseluis;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+
 import org.junit.jupiter.api.Test;
 
 public class IndexMBITest {
@@ -25,8 +26,7 @@ public class IndexMBITest {
 
         double result = indexMBI.calculateMBI();
         assertThat(result, is(28.73));
-        
-
+               
       }
 
 }      

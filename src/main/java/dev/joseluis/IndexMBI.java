@@ -29,7 +29,8 @@ public class IndexMBI {
     public double calculateMBI() {
         int square = 2;
         double imc = weight / Math.pow(height, square);
-        double imcRounded = Math.ceil(imc*100) / 100;
+        double imcRounded = Math.floor(imc*100) / 100;
         return imcRounded;
+        
     }
 }
